@@ -30,8 +30,9 @@ class JLTestUITests: XCTestCase {
     
     func testMainViewDisplayed() {
         
-        XCTAssertEqual(app.navigationBars.element.identifier, "dishwashersTitleID")
-        
+        let title = app.navigationBars.staticTexts["dishwashersTitleID"]
+        XCTAssertTrue(title.exists)
+    
     }
     
     func testCustomCell() {
@@ -48,11 +49,11 @@ class JLTestUITests: XCTestCase {
         XCTAssertTrue(cell.exists)
         
         let image = cell.images["productImageID"]
-        let name = cell.staticTexts["nameLableID"]
+        let description = cell.staticTexts["descriptionLableID"]
         let price = cell.staticTexts["priceLableID"]
         
         XCTAssertTrue(image.exists)
-        XCTAssertTrue(name.exists)
+        XCTAssertTrue(description.exists)
         XCTAssertTrue(price.exists)
 
     }

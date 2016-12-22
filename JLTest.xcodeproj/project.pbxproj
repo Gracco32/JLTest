@@ -13,7 +13,8 @@
 		E57D24CA1E0C45AA00B0995D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E57D24C81E0C45AA00B0995D /* LaunchScreen.storyboard */; };
 		E57D24E01E0C45AA00B0995D /* JLTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57D24DF1E0C45AA00B0995D /* JLTestUITests.swift */; };
 		E5A764701E0C4E5B00E7E3E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A7646F1E0C4E5B00E7E3E2 /* AppDelegate.swift */; };
-		E5A764721E0C4E7100E7E3E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A764711E0C4E7100E7E3E2 /* ViewController.swift */; };
+		E5A764721E0C4E7100E7E3E2 /* JLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A764711E0C4E7100E7E3E2 /* JLViewController.swift */; };
+		E5B2278F1E0C6232007565FA /* JLCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B2278E1E0C6232007565FA /* JLCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +47,8 @@
 		E57D24DF1E0C45AA00B0995D /* JLTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLTestUITests.swift; sourceTree = "<group>"; };
 		E57D24E11E0C45AA00B0995D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5A7646F1E0C4E5B00E7E3E2 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Delegates/AppDelegate.swift; sourceTree = "<group>"; };
-		E5A764711E0C4E7100E7E3E2 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Controllers/ViewController.swift; sourceTree = "<group>"; };
+		E5A764711E0C4E7100E7E3E2 /* JLViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLViewController.swift; path = Controllers/JLViewController.swift; sourceTree = "<group>"; };
+		E5B2278E1E0C6232007565FA /* JLCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLCollectionViewCell.swift; path = Views/CustomCellView/JLCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +136,7 @@
 		E5A7646A1E0C4D9600E7E3E2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E5A764711E0C4E7100E7E3E2 /* ViewController.swift */,
+				E5A764711E0C4E7100E7E3E2 /* JLViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -142,6 +144,7 @@
 		E5A7646B1E0C4DA100E7E3E2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E5B2278D1E0C61A9007565FA /* CellView */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -195,6 +198,14 @@
 			children = (
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		E5B2278D1E0C61A9007565FA /* CellView */ = {
+			isa = PBXGroup;
+			children = (
+				E5B2278E1E0C6232007565FA /* JLCollectionViewCell.swift */,
+			);
+			name = CellView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +270,7 @@
 		E57D24B11E0C45AA00B0995D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = JL;
 				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = Fabio;
@@ -336,7 +348,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5359BCD1E0C56EB0053581A /* JLTest.xcdatamodeld in Sources */,
-				E5A764721E0C4E7100E7E3E2 /* ViewController.swift in Sources */,
+				E5A764721E0C4E7100E7E3E2 /* JLViewController.swift in Sources */,
+				E5B2278F1E0C6232007565FA /* JLCollectionViewCell.swift in Sources */,
 				E5A764701E0C4E5B00E7E3E2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
