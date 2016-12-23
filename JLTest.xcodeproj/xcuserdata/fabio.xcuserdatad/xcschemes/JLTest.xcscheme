@@ -20,6 +20,34 @@
                ReferencedContainer = "container:JLTest.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E57D24CF1E0C45AA00B0995D"
+               BuildableName = "JLTestTests.xctest"
+               BlueprintName = "JLTestTests"
+               ReferencedContainer = "container:JLTest.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E57D24DA1E0C45AA00B0995D"
+               BuildableName = "JLTestUITests.xctest"
+               BlueprintName = "JLTestUITests"
+               ReferencedContainer = "container:JLTest.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -29,26 +57,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       codeCoverageEnabled = "YES">
       <Testables>
-         <TestableReference
-            skipped = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E57D24CF1E0C45AA00B0995D"
-               BuildableName = "JLTestTests.xctest"
-               BlueprintName = "JLTestTests"
-               ReferencedContainer = "container:JLTest.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E57D24DA1E0C45AA00B0995D"
-               BuildableName = "JLTestUITests.xctest"
-               BlueprintName = "JLTestUITests"
-               ReferencedContainer = "container:JLTest.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
