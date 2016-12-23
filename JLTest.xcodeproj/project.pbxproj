@@ -17,6 +17,10 @@
 		E5A764701E0C4E5B00E7E3E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A7646F1E0C4E5B00E7E3E2 /* AppDelegate.swift */; };
 		E5A764721E0C4E7100E7E3E2 /* JLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A764711E0C4E7100E7E3E2 /* JLViewController.swift */; };
 		E5B2278F1E0C6232007565FA /* JLCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B2278E1E0C6232007565FA /* JLCollectionViewCell.swift */; };
+		E5B227911E0DA10B007565FA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B227901E0DA10B007565FA /* main.swift */; };
+		E5B227931E0DA1C8007565FA /* JLTestingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B227921E0DA1C8007565FA /* JLTestingAppDelegate.swift */; };
+		E5B227971E0DAD45007565FA /* JLRequestFactoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B227961E0DAD45007565FA /* JLRequestFactoryTest.swift */; };
+		E5B227991E0DD05E007565FA /* JLRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B227981E0DD05E007565FA /* JLRequestFactory.swift */; };
 		FDF9783CED00D54716D9E31C /* Pods_JLTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3A57F209DE3E8C41EFDBC6E /* Pods_JLTestUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +64,10 @@
 		E5A7646F1E0C4E5B00E7E3E2 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Delegates/AppDelegate.swift; sourceTree = "<group>"; };
 		E5A764711E0C4E7100E7E3E2 /* JLViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLViewController.swift; path = Controllers/JLViewController.swift; sourceTree = "<group>"; };
 		E5B2278E1E0C6232007565FA /* JLCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLCollectionViewCell.swift; path = Views/CustomCellView/JLCollectionViewCell.swift; sourceTree = "<group>"; };
+		E5B227901E0DA10B007565FA /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		E5B227921E0DA1C8007565FA /* JLTestingAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLTestingAppDelegate.swift; path = Delegates/JLTestingAppDelegate.swift; sourceTree = "<group>"; };
+		E5B227961E0DAD45007565FA /* JLRequestFactoryTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLRequestFactoryTest.swift; path = Network/JLRequestFactoryTest.swift; sourceTree = "<group>"; };
+		E5B227981E0DD05E007565FA /* JLRequestFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLRequestFactory.swift; path = Network/JLRequestFactory.swift; sourceTree = "<group>"; };
 		F8722731750C2DC7325D8E07 /* Pods_JLTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JLTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -144,6 +152,7 @@
 				E5A7646C1E0C4DAA00E7E3E2 /* Model */,
 				E5A7646B1E0C4DA100E7E3E2 /* Views */,
 				E5A7646E1E0C4DB900E7E3E2 /* Delegates */,
+				E5B227901E0DA10B007565FA /* main.swift */,
 				E57D24C01E0C45AA00B0995D /* Main.storyboard */,
 				E57D24C61E0C45AA00B0995D /* Assets.xcassets */,
 				E57D24C81E0C45AA00B0995D /* LaunchScreen.storyboard */,
@@ -200,6 +209,7 @@
 		E5A7646D1E0C4DB000E7E3E2 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				E5B227981E0DD05E007565FA /* JLRequestFactory.swift */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -208,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				E5A7646F1E0C4E5B00E7E3E2 /* AppDelegate.swift */,
+				E5B227921E0DA1C8007565FA /* JLTestingAppDelegate.swift */,
 			);
 			name = Delegates;
 			sourceTree = "<group>";
@@ -222,6 +233,7 @@
 		E5A764741E0C4F2600E7E3E2 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				E5B227961E0DAD45007565FA /* JLRequestFactoryTest.swift */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -333,6 +345,7 @@
 					E57D24CF1E0C45AA00B0995D = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = J5X2W9RVQK;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = E57D24B81E0C45AA00B0995D;
 					};
@@ -534,8 +547,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5B227991E0DD05E007565FA /* JLRequestFactory.swift in Sources */,
 				E5359BCD1E0C56EB0053581A /* JLTest.xcdatamodeld in Sources */,
+				E5B227911E0DA10B007565FA /* main.swift in Sources */,
 				E5A764721E0C4E7100E7E3E2 /* JLViewController.swift in Sources */,
+				E5B227931E0DA1C8007565FA /* JLTestingAppDelegate.swift in Sources */,
 				E5B2278F1E0C6232007565FA /* JLCollectionViewCell.swift in Sources */,
 				E5A764701E0C4E5B00E7E3E2 /* AppDelegate.swift in Sources */,
 			);
@@ -545,6 +561,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5B227971E0DAD45007565FA /* JLRequestFactoryTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -721,11 +738,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = J5X2W9RVQK;
 				INFOPLIST_FILE = JLTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fabio.JLTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JLTest.app/JLTest";
 			};
@@ -737,6 +756,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = J5X2W9RVQK;
 				INFOPLIST_FILE = JLTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
