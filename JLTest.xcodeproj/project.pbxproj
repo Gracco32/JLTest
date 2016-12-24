@@ -21,6 +21,11 @@
 		E5B227931E0DA1C8007565FA /* JLTestingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B227921E0DA1C8007565FA /* JLTestingAppDelegate.swift */; };
 		E5B227971E0DAD45007565FA /* JLRequestFactoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B227961E0DAD45007565FA /* JLRequestFactoryTest.swift */; };
 		E5B227991E0DD05E007565FA /* JLRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B227981E0DD05E007565FA /* JLRequestFactory.swift */; };
+		E5B2279B1E0DD7F2007565FA /* JLRequestSenderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B2279A1E0DD7F2007565FA /* JLRequestSenderTest.swift */; };
+		E5B2279D1E0DDB4A007565FA /* JLRequestSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B2279C1E0DDB4A007565FA /* JLRequestSender.swift */; };
+		E5B2279F1E0DDEA0007565FA /* JLNetworkDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B2279E1E0DDEA0007565FA /* JLNetworkDelegate.swift */; };
+		E5B227A41E0E8AB4007565FA /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = E5B227A31E0E8AB4007565FA /* test.json */; };
+		E5B227A61E0E94AB007565FA /* JLEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B227A51E0E94AB007565FA /* JLEnum.swift */; };
 		FDF9783CED00D54716D9E31C /* Pods_JLTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3A57F209DE3E8C41EFDBC6E /* Pods_JLTestUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +73,11 @@
 		E5B227921E0DA1C8007565FA /* JLTestingAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLTestingAppDelegate.swift; path = Delegates/JLTestingAppDelegate.swift; sourceTree = "<group>"; };
 		E5B227961E0DAD45007565FA /* JLRequestFactoryTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLRequestFactoryTest.swift; path = Network/JLRequestFactoryTest.swift; sourceTree = "<group>"; };
 		E5B227981E0DD05E007565FA /* JLRequestFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLRequestFactory.swift; path = Network/JLRequestFactory.swift; sourceTree = "<group>"; };
+		E5B2279A1E0DD7F2007565FA /* JLRequestSenderTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLRequestSenderTest.swift; path = Network/JLRequestSenderTest.swift; sourceTree = "<group>"; };
+		E5B2279C1E0DDB4A007565FA /* JLRequestSender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLRequestSender.swift; path = Network/JLRequestSender.swift; sourceTree = "<group>"; };
+		E5B2279E1E0DDEA0007565FA /* JLNetworkDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLNetworkDelegate.swift; path = Network/JLNetworkDelegate.swift; sourceTree = "<group>"; };
+		E5B227A31E0E8AB4007565FA /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
+		E5B227A51E0E94AB007565FA /* JLEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLEnum.swift; path = Utilities/JLEnum.swift; sourceTree = "<group>"; };
 		F8722731750C2DC7325D8E07 /* Pods_JLTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JLTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -150,8 +160,9 @@
 				E5A7646A1E0C4D9600E7E3E2 /* Controllers */,
 				E5A7646D1E0C4DB000E7E3E2 /* Network */,
 				E5A7646C1E0C4DAA00E7E3E2 /* Model */,
+				E5B227A01E0DDF25007565FA /* Utilities */,
 				E5A7646B1E0C4DA100E7E3E2 /* Views */,
-				E5A7646E1E0C4DB900E7E3E2 /* Delegates */,
+				E5A7646E1E0C4DB900E7E3E2 /* AppDelegates */,
 				E5B227901E0DA10B007565FA /* main.swift */,
 				E57D24C01E0C45AA00B0995D /* Main.storyboard */,
 				E57D24C61E0C45AA00B0995D /* Assets.xcassets */,
@@ -210,17 +221,19 @@
 			isa = PBXGroup;
 			children = (
 				E5B227981E0DD05E007565FA /* JLRequestFactory.swift */,
+				E5B2279C1E0DDB4A007565FA /* JLRequestSender.swift */,
+				E5B2279E1E0DDEA0007565FA /* JLNetworkDelegate.swift */,
 			);
 			name = Network;
 			sourceTree = "<group>";
 		};
-		E5A7646E1E0C4DB900E7E3E2 /* Delegates */ = {
+		E5A7646E1E0C4DB900E7E3E2 /* AppDelegates */ = {
 			isa = PBXGroup;
 			children = (
 				E5A7646F1E0C4E5B00E7E3E2 /* AppDelegate.swift */,
 				E5B227921E0DA1C8007565FA /* JLTestingAppDelegate.swift */,
 			);
-			name = Delegates;
+			name = AppDelegates;
 			sourceTree = "<group>";
 		};
 		E5A764731E0C4F1A00E7E3E2 /* Controllers */ = {
@@ -234,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				E5B227961E0DAD45007565FA /* JLRequestFactoryTest.swift */,
+				E5B2279A1E0DD7F2007565FA /* JLRequestSenderTest.swift */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -248,6 +262,7 @@
 		E5A764761E0C4F4300E7E3E2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E5B227A31E0E8AB4007565FA /* test.json */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -258,6 +273,14 @@
 				E5B2278E1E0C6232007565FA /* JLCollectionViewCell.swift */,
 			);
 			name = CellView;
+			sourceTree = "<group>";
+		};
+		E5B227A01E0DDF25007565FA /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E5B227A51E0E94AB007565FA /* JLEnum.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -392,6 +415,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5B227A41E0E8AB4007565FA /* test.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,10 +571,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5B2279D1E0DDB4A007565FA /* JLRequestSender.swift in Sources */,
 				E5B227991E0DD05E007565FA /* JLRequestFactory.swift in Sources */,
+				E5B227A61E0E94AB007565FA /* JLEnum.swift in Sources */,
 				E5359BCD1E0C56EB0053581A /* JLTest.xcdatamodeld in Sources */,
 				E5B227911E0DA10B007565FA /* main.swift in Sources */,
 				E5A764721E0C4E7100E7E3E2 /* JLViewController.swift in Sources */,
+				E5B2279F1E0DDEA0007565FA /* JLNetworkDelegate.swift in Sources */,
 				E5B227931E0DA1C8007565FA /* JLTestingAppDelegate.swift in Sources */,
 				E5B2278F1E0C6232007565FA /* JLCollectionViewCell.swift in Sources */,
 				E5A764701E0C4E5B00E7E3E2 /* AppDelegate.swift in Sources */,
@@ -561,6 +588,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5B2279B1E0DD7F2007565FA /* JLRequestSenderTest.swift in Sources */,
 				E5B227971E0DAD45007565FA /* JLRequestFactoryTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

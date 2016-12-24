@@ -27,11 +27,7 @@ class JLViewController: UIViewController, UICollectionViewDelegate, UICollection
     // MARK: UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-//        if let summaries = self.dataSource {
-//            return summaries.count
-//        }
-        
+            
         return 0
     }
     

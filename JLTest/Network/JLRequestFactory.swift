@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import XCGLogger
 
 class JLRequestFactory {
     
@@ -48,7 +47,7 @@ class JLRequestFactory {
      
      - returns: The newly created request.
      */
-    func dataRequestWithMethod(method: String, endpoint: String) -> NSURLRequest? {
+    func dataRequestWithMethod(method: String, endpoint: String) -> URLRequest? {
         
         if let request = self.createBaseRequest(endpoint: endpoint, method: method) {
             
@@ -56,12 +55,10 @@ class JLRequestFactory {
                 request.setValue("application/json", forHTTPHeaderField: "Content-Type")
             }
             
-            return request;
+            return request as URLRequest
         }
         
         return nil
     }
-    
-    
     
 }
