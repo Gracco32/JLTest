@@ -1,4 +1,5 @@
 PODS:
+  - DATAStack (6.2.0)
   - OHHTTPStubs (5.2.3):
     - OHHTTPStubs/Default (= 5.2.3)
   - OHHTTPStubs/Core (5.2.3)
@@ -19,14 +20,16 @@ PODS:
   - XCGLogger/Core (4.0.0)
 
 DEPENDENCIES:
+  - DATAStack (~> 6)
   - OHHTTPStubs
   - OHHTTPStubs/Swift
   - XCGLogger (~> 4.0)
 
 SPEC CHECKSUMS:
+  DATAStack: 06d6a00f4fe84f11afdae2a6f47558f1087000e5
   OHHTTPStubs: e238cd5b66d8efa51c861db45895de8fe079f4a7
   XCGLogger: 38063ea89b4c8b23232d18efd2e12eb0005f3ea4
 
-PODFILE CHECKSUM: b70d58fe023af56492297dec2554dc9d1ff105e2
+PODFILE CHECKSUM: 5456b9aa9644d3463f2f5f16a898a77293d93c67
 
 COCOAPODS: 1.1.1

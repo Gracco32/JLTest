@@ -9,7 +9,8 @@ target 'JLTest' do
   pod 'XCGLogger', '~> 4.0'
   pod 'OHHTTPStubs' # Default subspecs, including support for NSURLSession & JSON etc
   pod 'OHHTTPStubs/Swift' # Adds the Swiftier API wrapper too
-
+  pod 'DATAStack', '~> 6'
+  
   target 'JLTestTests' do
     inherit! :search_paths
     # Pods for testing

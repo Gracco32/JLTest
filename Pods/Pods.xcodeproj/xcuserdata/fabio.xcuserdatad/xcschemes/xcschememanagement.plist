@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>DATAStack.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>OHHTTPStubs.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,17 +37,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0A2211671CE4FFEA79B99B0809FC77B4</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>1A6B32233354E225EE6520FBB85AF083</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>25A2371CA102512879C71D59F6957EC8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>48E12839A46E2E91A05B24B0CA8D92DF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -53,6 +53,16 @@
 			<true/>
 		</dict>
 		<key>748F1C7F61D88F3FB355A8E829489671</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AB7BE14D5E3DE91958017004C68FFAF0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C78830FFF562149B4B693AB9DB8D3DF5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
