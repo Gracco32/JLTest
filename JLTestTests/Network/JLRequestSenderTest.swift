@@ -98,7 +98,7 @@ class JLRequestSenderTest: XCTestCase, JLNetworkDelegate {
         func requestFailed(type: JLRequestType, httpCode: Int?) {
             
             if expectation.description == "requestFailExpectation" ||
-                expectation.description == "requestFrameworkFailExpectation"{
+                expectation.description == "requestFrameworkFailExpectation" {
                 expectation.fulfill()
             }
             
