@@ -77,6 +77,7 @@ class JLRequestSender: NSObject, URLSessionTaskDelegate, URLSessionDataDelegate 
             task.taskDescription = taskId
             task.resume()
             
+            JLLogger.networkRequestLog(request: request!, type: type)
         }
         
         self.active = self.tasksBeingExecuted.count > 0

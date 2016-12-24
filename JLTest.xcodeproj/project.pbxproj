@@ -26,6 +26,7 @@
 		E5B2279F1E0DDEA0007565FA /* JLNetworkDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B2279E1E0DDEA0007565FA /* JLNetworkDelegate.swift */; };
 		E5B227A41E0E8AB4007565FA /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = E5B227A31E0E8AB4007565FA /* test.json */; };
 		E5B227A61E0E94AB007565FA /* JLEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B227A51E0E94AB007565FA /* JLEnum.swift */; };
+		E5B227A81E0E98A6007565FA /* JLLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B227A71E0E98A6007565FA /* JLLogger.swift */; };
 		FDF9783CED00D54716D9E31C /* Pods_JLTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3A57F209DE3E8C41EFDBC6E /* Pods_JLTestUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,7 @@
 		E5B2279E1E0DDEA0007565FA /* JLNetworkDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLNetworkDelegate.swift; path = Network/JLNetworkDelegate.swift; sourceTree = "<group>"; };
 		E5B227A31E0E8AB4007565FA /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
 		E5B227A51E0E94AB007565FA /* JLEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLEnum.swift; path = Utilities/JLEnum.swift; sourceTree = "<group>"; };
+		E5B227A71E0E98A6007565FA /* JLLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLLogger.swift; path = Utilities/JLLogger.swift; sourceTree = "<group>"; };
 		F8722731750C2DC7325D8E07 /* Pods_JLTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JLTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -279,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				E5B227A51E0E94AB007565FA /* JLEnum.swift */,
+				E5B227A71E0E98A6007565FA /* JLLogger.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -572,6 +575,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5B2279D1E0DDB4A007565FA /* JLRequestSender.swift in Sources */,
+				E5B227A81E0E98A6007565FA /* JLLogger.swift in Sources */,
 				E5B227991E0DD05E007565FA /* JLRequestFactory.swift in Sources */,
 				E5B227A61E0E94AB007565FA /* JLEnum.swift in Sources */,
 				E5359BCD1E0C56EB0053581A /* JLTest.xcdatamodeld in Sources */,
