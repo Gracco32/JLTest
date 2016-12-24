@@ -18,7 +18,6 @@ class JLModelLayer: NSObject {
         self.dataStack = dataStack
     }
     
-    
     /**
      Fetch data from the model.
      

@@ -11,12 +11,17 @@
     </entity>
     <entity name="Product" representedClassName=".JLProduct" syncable="YES">
         <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="productId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productId" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="hyper.isPrimaryKey" value="true"/>
+                <entry key="hyper.remoteKey" value="productId"/>
+            </userInfo>
+        </attribute>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="price" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Price" inverseName="product" inverseEntity="Price" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Product" positionX="-63" positionY="-18" width="128" height="105"/>
         <element name="Price" positionX="-54" positionY="18" width="128" height="150"/>
+        <element name="Product" positionX="-63" positionY="-18" width="128" height="30"/>
     </elements>
 </model>

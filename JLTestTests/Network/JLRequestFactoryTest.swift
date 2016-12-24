@@ -45,7 +45,7 @@ class JLRequestFactoryTest: XCTestCase {
     
     func testDataRequestWithMethod() {
         
-        let endpoint = "posts"
+        let endpoint = "products"
         let method = "GET"
         
         let request = requestFactory.dataRequestWithMethod(method: method, endpoint: endpoint)

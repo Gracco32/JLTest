@@ -1,5 +1,7 @@
 PODS:
-  - DATAStack (6.2.0)
+  - DATASource (6.1.4)
+  - DATAStack (6.1.2)
+  - JSON (5.0.0)
   - OHHTTPStubs (5.2.3):
     - OHHTTPStubs/Default (= 5.2.3)
   - OHHTTPStubs/Core (5.2.3)
@@ -15,21 +17,31 @@ PODS:
   - OHHTTPStubs/OHPathHelpers (5.2.3)
   - OHHTTPStubs/Swift (5.2.3):
     - OHHTTPStubs/Core
+  - Sync (2.6.2):
+    - DATAStack (~> 6.1.2)
+    - SYNCPropertyMapper (~> 5.2.0)
+  - SYNCPropertyMapper (5.2.0)
   - XCGLogger (4.0.0):
     - XCGLogger/Core (= 4.0.0)
   - XCGLogger/Core (4.0.0)
 
 DEPENDENCIES:
-  - DATAStack (~> 6)
+  - DATASource
+  - JSON
   - OHHTTPStubs
   - OHHTTPStubs/Swift
+  - Sync (~> 2)
   - XCGLogger (~> 4.0)
 
 SPEC CHECKSUMS:
-  DATAStack: 06d6a00f4fe84f11afdae2a6f47558f1087000e5
+  DATASource: 1b88a4b9556f9d146319f8187c249aa2130e3714
+  DATAStack: a45fc144e15193f1b22c26b507cc46655ce96a71
+  JSON: 93622160a062588b4cd3497b77ccd777f1fd0587
   OHHTTPStubs: e238cd5b66d8efa51c861db45895de8fe079f4a7
+  Sync: 02e5442ed69b0081f7f9a33e6c472f6f84d157ec
+  SYNCPropertyMapper: b3157f5183285c8a25ba23877b95a06ec2547e73
   XCGLogger: 38063ea89b4c8b23232d18efd2e12eb0005f3ea4
 
-PODFILE CHECKSUM: 5456b9aa9644d3463f2f5f16a898a77293d93c67
+PODFILE CHECKSUM: 3a18cda7812b636a5733b5d09ae3f907be497069
 
 COCOAPODS: 1.1.1

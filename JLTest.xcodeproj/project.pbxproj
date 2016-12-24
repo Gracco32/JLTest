@@ -28,13 +28,15 @@
 		E5B227A81E0E98A6007565FA /* JLLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B227A71E0E98A6007565FA /* JLLogger.swift */; };
 		E5B227AA1E0EA046007565FA /* JLRequestEndpointsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B227A91E0EA046007565FA /* JLRequestEndpointsTest.swift */; };
 		E5B227AC1E0EA3B3007565FA /* JLRequestEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B227AB1E0EA3B3007565FA /* JLRequestEndpoints.swift */; };
-		E5B227AF1E0EBADE007565FA /* JLResponseParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B227AE1E0EBADE007565FA /* JLResponseParserTest.swift */; };
 		E5B227B11E0EBB15007565FA /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = E5B227B01E0EBB15007565FA /* test.json */; };
-		E5B227B31E0EBD1E007565FA /* JLResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B227B21E0EBD1E007565FA /* JLResponseParser.swift */; };
 		E5B227B51E0ECD9E007565FA /* JLProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B227B41E0ECD9E007565FA /* JLProduct.swift */; };
 		E5B227B71E0ECE1F007565FA /* JLPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B227B61E0ECE1F007565FA /* JLPrice.swift */; };
 		E5B227B91E0ED751007565FA /* JLModelLayerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B227B81E0ED751007565FA /* JLModelLayerTest.swift */; };
 		E5B227BB1E0EDAAA007565FA /* JLModelLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B227BA1E0EDAAA007565FA /* JLModelLayer.swift */; };
+		E5B227BE1E0EEEC1007565FA /* JLResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B227BD1E0EEEC1007565FA /* JLResponseParser.swift */; };
+		E5B227C11E0EEF21007565FA /* JLResponseParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B227C01E0EEF21007565FA /* JLResponseParserTest.swift */; };
+		E5B227C51E0EEF98007565FA /* JLDataHelperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B227C41E0EEF98007565FA /* JLDataHelperTest.swift */; };
+		E5B227C71E0EF382007565FA /* JLDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B227C61E0EF382007565FA /* JLDataHelper.swift */; };
 		FDF9783CED00D54716D9E31C /* Pods_JLTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3A57F209DE3E8C41EFDBC6E /* Pods_JLTestUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -89,13 +91,15 @@
 		E5B227A71E0E98A6007565FA /* JLLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLLogger.swift; path = Utilities/JLLogger.swift; sourceTree = "<group>"; };
 		E5B227A91E0EA046007565FA /* JLRequestEndpointsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLRequestEndpointsTest.swift; path = Network/JLRequestEndpointsTest.swift; sourceTree = "<group>"; };
 		E5B227AB1E0EA3B3007565FA /* JLRequestEndpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLRequestEndpoints.swift; path = Network/JLRequestEndpoints.swift; sourceTree = "<group>"; };
-		E5B227AE1E0EBADE007565FA /* JLResponseParserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLResponseParserTest.swift; path = Utilities/JLResponseParserTest.swift; sourceTree = "<group>"; };
 		E5B227B01E0EBB15007565FA /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = test.json; path = Resources/test.json; sourceTree = "<group>"; };
-		E5B227B21E0EBD1E007565FA /* JLResponseParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLResponseParser.swift; path = Utilities/JLResponseParser.swift; sourceTree = "<group>"; };
 		E5B227B41E0ECD9E007565FA /* JLProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLProduct.swift; path = Model/JLProduct.swift; sourceTree = "<group>"; };
 		E5B227B61E0ECE1F007565FA /* JLPrice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLPrice.swift; path = Model/JLPrice.swift; sourceTree = "<group>"; };
 		E5B227B81E0ED751007565FA /* JLModelLayerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLModelLayerTest.swift; path = Model/JLModelLayerTest.swift; sourceTree = "<group>"; };
 		E5B227BA1E0EDAAA007565FA /* JLModelLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLModelLayer.swift; path = Model/JLModelLayer.swift; sourceTree = "<group>"; };
+		E5B227BD1E0EEEC1007565FA /* JLResponseParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLResponseParser.swift; path = Network/Utilities/JLResponseParser.swift; sourceTree = "<group>"; };
+		E5B227C01E0EEF21007565FA /* JLResponseParserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLResponseParserTest.swift; path = Network/Utilities/JLResponseParserTest.swift; sourceTree = "<group>"; };
+		E5B227C41E0EEF98007565FA /* JLDataHelperTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLDataHelperTest.swift; path = Network/Utilities/JLDataHelperTest.swift; sourceTree = "<group>"; };
+		E5B227C61E0EF382007565FA /* JLDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLDataHelper.swift; path = Network/Utilities/JLDataHelper.swift; sourceTree = "<group>"; };
 		F8722731750C2DC7325D8E07 /* Pods_JLTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JLTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -242,6 +246,7 @@
 		E5A7646D1E0C4DB000E7E3E2 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				E5B227BC1E0EEE70007565FA /* Utilities */,
 				E5B227981E0DD05E007565FA /* JLRequestFactory.swift */,
 				E5B2279C1E0DDB4A007565FA /* JLRequestSender.swift */,
 				E5B2279E1E0DDEA0007565FA /* JLNetworkDelegate.swift */,
@@ -269,6 +274,7 @@
 		E5A764741E0C4F2600E7E3E2 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				E5B227BF1E0EEF10007565FA /* Utilities */,
 				E5B227961E0DAD45007565FA /* JLRequestFactoryTest.swift */,
 				E5B2279A1E0DD7F2007565FA /* JLRequestSenderTest.swift */,
 				E5B227A91E0EA046007565FA /* JLRequestEndpointsTest.swift */,
@@ -305,7 +311,6 @@
 			children = (
 				E5B227A51E0E94AB007565FA /* JLEnum.swift */,
 				E5B227A71E0E98A6007565FA /* JLLogger.swift */,
-				E5B227B21E0EBD1E007565FA /* JLResponseParser.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -313,7 +318,24 @@
 		E5B227AD1E0EBAB3007565FA /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				E5B227AE1E0EBADE007565FA /* JLResponseParserTest.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		E5B227BC1E0EEE70007565FA /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E5B227BD1E0EEEC1007565FA /* JLResponseParser.swift */,
+				E5B227C61E0EF382007565FA /* JLDataHelper.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		E5B227BF1E0EEF10007565FA /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E5B227C01E0EEF21007565FA /* JLResponseParserTest.swift */,
+				E5B227C41E0EEF98007565FA /* JLDataHelperTest.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -606,10 +628,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5B227B31E0EBD1E007565FA /* JLResponseParser.swift in Sources */,
 				E5B227BB1E0EDAAA007565FA /* JLModelLayer.swift in Sources */,
 				E5B2279D1E0DDB4A007565FA /* JLRequestSender.swift in Sources */,
 				E5B227A81E0E98A6007565FA /* JLLogger.swift in Sources */,
+				E5B227BE1E0EEEC1007565FA /* JLResponseParser.swift in Sources */,
 				E5B227991E0DD05E007565FA /* JLRequestFactory.swift in Sources */,
 				E5B227A61E0E94AB007565FA /* JLEnum.swift in Sources */,
 				E5359BCD1E0C56EB0053581A /* JLTest.xcdatamodeld in Sources */,
@@ -621,6 +643,7 @@
 				E5B227931E0DA1C8007565FA /* JLTestingAppDelegate.swift in Sources */,
 				E5B2278F1E0C6232007565FA /* JLCollectionViewCell.swift in Sources */,
 				E5B227AC1E0EA3B3007565FA /* JLRequestEndpoints.swift in Sources */,
+				E5B227C71E0EF382007565FA /* JLDataHelper.swift in Sources */,
 				E5A764701E0C4E5B00E7E3E2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -631,9 +654,10 @@
 			files = (
 				E5B2279B1E0DD7F2007565FA /* JLRequestSenderTest.swift in Sources */,
 				E5B227971E0DAD45007565FA /* JLRequestFactoryTest.swift in Sources */,
+				E5B227C11E0EEF21007565FA /* JLResponseParserTest.swift in Sources */,
 				E5B227AA1E0EA046007565FA /* JLRequestEndpointsTest.swift in Sources */,
 				E5B227B91E0ED751007565FA /* JLModelLayerTest.swift in Sources */,
-				E5B227AF1E0EBADE007565FA /* JLResponseParserTest.swift in Sources */,
+				E5B227C51E0EEF98007565FA /* JLDataHelperTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

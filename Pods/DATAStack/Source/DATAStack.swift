@@ -32,7 +32,7 @@ import CoreData
                 context.mergePolicy = NSMergeByPropertyStoreTrumpMergePolicy
                 context.persistentStoreCoordinator = self.persistentStoreCoordinator
 
-                NotificationCenter.default.addObserver(self, selector: #selector(DATAStack.mainContextDidSave(_:)), name: .NSManagedObjectContextDidSave, object: context)
+                NotificationCenter.default.addObserver(self, selector: #selector(DATAStack.mainContextDidSave(_:)), name: NSNotification.Name.NSManagedObjectContextDidSave, object: context)
 
                 _mainContext = context
             }
@@ -210,8 +210,8 @@ import CoreData
     }
 
     deinit {
-        NotificationCenter.default.removeObserver(self, name: .NSManagedObjectContextWillSave, object: nil)
-        NotificationCenter.default.removeObserver(self, name: .NSManagedObjectContextDidSave, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.NSManagedObjectContextWillSave, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.NSManagedObjectContextDidSave, object: nil)
     }
 
     /**
@@ -250,7 +250,7 @@ import CoreData
         context.undoManager = nil
         context.mergePolicy = NSMergeByPropertyStoreTrumpMergePolicy
 
-        NotificationCenter.default.addObserver(self, selector: #selector(DATAStack.backgroundContextDidSave(_:)), name: .NSManagedObjectContextDidSave, object: context)
+        NotificationCenter.default.addObserver(self, selector: #selector(DATAStack.backgroundContextDidSave(_:)), name: NSNotification.Name.NSManagedObjectContextDidSave, object: context)
 
         return context
     }
@@ -350,17 +350,6 @@ import CoreData
         }
     }
 
-    /// Sends a request to all the persistent stores associated with the receiver.
-    ///
-    /// - Parameters:
-    ///   - request: A fetch, save or delete request.
-    ///   - context: The context against which request should be executed.
-    /// - Returns: An array containing managed objects, managed object IDs, or dictionaries as appropriate for a fetch request; an empty array if request is a save request, or nil if an error occurred.
-    /// - Throws: If an error occurs, upon return contains an NSError object that describes the problem.
-    public func execute(_ request: NSPersistentStoreRequest, with context: NSManagedObjectContext) throws -> Any {
-        return try self.persistentStoreCoordinator.execute(request, with: context)
-    }
-
     // Can't be private, has to be internal in order to be used as a selector.
     func mainContextDidSave(_ notification: Notification) {
         self.saveMainThread { error in
@@ -447,7 +436,7 @@ extension NSPersistentStoreCoordinator {
             let shouldExcludeSQLiteFromBackup = storeType == .sqLite && TestCheck.isTesting == false
             if shouldExcludeSQLiteFromBackup {
                 do {
-                    try (storeURL as NSURL).setResourceValue(true, forKey: .isExcludedFromBackupKey)
+                    try (storeURL as NSURL).setResourceValue(true, forKey: URLResourceKey.isExcludedFromBackupKey)
                 } catch let excludingError as NSError {
                     throw NSError(info: "Excluding SQLite file from backup caused an error", previousError: excludingError)
                 }
