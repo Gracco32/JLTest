@@ -33,8 +33,9 @@ class JLRequestSenderTest: XCTestCase, JLNetworkDelegate {
             }
 
             requestFactory = JLRequestFactoryMock()
+            let parser = JLResponseParser()
             
-            requestSender = JLRequestSender(requestFactory: requestFactory, delegate: self)
+            requestSender = JLRequestSender(requestFactory: requestFactory, parser: parser, delegate: self)
         }
         
         override func tearDown() {

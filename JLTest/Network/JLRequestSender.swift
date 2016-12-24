@@ -15,6 +15,7 @@ class JLRequestSender: NSObject, URLSessionTaskDelegate, URLSessionDataDelegate 
     
     var session: URLSession!
     var requestFactory: JLRequestFactory!
+    var parser: JLResponseParser!
     
     weak var delegate: JLNetworkDelegate?
     
@@ -27,11 +28,12 @@ class JLRequestSender: NSObject, URLSessionTaskDelegate, URLSessionDataDelegate 
     
     //MARK: Initialiser
     
-    init(requestFactory: JLRequestFactory, urlSession: URLSession? = nil, delegate: JLNetworkDelegate?) {
+    init(requestFactory: JLRequestFactory, parser: JLResponseParser, urlSession: URLSession? = nil, delegate: JLNetworkDelegate?) {
         
         super.init()
         
         self.requestFactory = requestFactory
+        self.parser = parser
         self.delegate = delegate
         
         if let session = urlSession {
@@ -43,7 +45,7 @@ class JLRequestSender: NSObject, URLSessionTaskDelegate, URLSessionDataDelegate 
     }
 
     /**
-     Create and initializes NSURL session.
+     Create and initializes URL session.
      */
     private func initializeSession() -> URLSession {
         let sessionConfiguration = URLSessionConfiguration.default
@@ -95,18 +97,13 @@ class JLRequestSender: NSObject, URLSessionTaskDelegate, URLSessionDataDelegate 
         if let taskDescription = task.taskDescription,
             let data = self.tasksBeingExecuted[taskDescription] {
             
-            var json: Dictionary<String,AnyObject>!
+            if let parsedData = parser.parse(data: data) as? [String: AnyObject] {
             
-            let datastring = NSString(data: data, encoding: String.Encoding.utf8.rawValue)
-            log.debug(datastring as? String)
-            
-            do {
-                json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions()) as? Dictionary<String,AnyObject>
+                // parsing succeeded
+                self.notifyDelegateRequestProcessed(requestType: requestType, data: parsedData)
                 
-                self.notifyDelegateRequestProcessed(requestType: requestType, data: json)
-                
-            } catch {
-                log.error("JSONSerialization failure!")
+            } else {
+                // parsing failed
                 self.notifyDelegateRequestFailed(requestType: requestType, httpCode: httpCode)
             }
 
