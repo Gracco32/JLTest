@@ -31,6 +31,8 @@
 		E5B227AF1E0EBADE007565FA /* JLResponseParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B227AE1E0EBADE007565FA /* JLResponseParserTest.swift */; };
 		E5B227B11E0EBB15007565FA /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = E5B227B01E0EBB15007565FA /* test.json */; };
 		E5B227B31E0EBD1E007565FA /* JLResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B227B21E0EBD1E007565FA /* JLResponseParser.swift */; };
+		E5B227B51E0ECD9E007565FA /* JLProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B227B41E0ECD9E007565FA /* JLProduct.swift */; };
+		E5B227B71E0ECE1F007565FA /* JLPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B227B61E0ECE1F007565FA /* JLPrice.swift */; };
 		FDF9783CED00D54716D9E31C /* Pods_JLTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3A57F209DE3E8C41EFDBC6E /* Pods_JLTestUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +90,8 @@
 		E5B227AE1E0EBADE007565FA /* JLResponseParserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLResponseParserTest.swift; path = Utilities/JLResponseParserTest.swift; sourceTree = "<group>"; };
 		E5B227B01E0EBB15007565FA /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = test.json; path = Resources/test.json; sourceTree = "<group>"; };
 		E5B227B21E0EBD1E007565FA /* JLResponseParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLResponseParser.swift; path = Utilities/JLResponseParser.swift; sourceTree = "<group>"; };
+		E5B227B41E0ECD9E007565FA /* JLProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLProduct.swift; path = Model/JLProduct.swift; sourceTree = "<group>"; };
+		E5B227B61E0ECE1F007565FA /* JLPrice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLPrice.swift; path = Model/JLPrice.swift; sourceTree = "<group>"; };
 		F8722731750C2DC7325D8E07 /* Pods_JLTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JLTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -224,6 +228,8 @@
 			isa = PBXGroup;
 			children = (
 				E5359BCB1E0C56EB0053581A /* JLTest.xcdatamodeld */,
+				E5B227B41E0ECD9E007565FA /* JLProduct.swift */,
+				E5B227B61E0ECE1F007565FA /* JLPrice.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -601,8 +607,10 @@
 				E5B227A61E0E94AB007565FA /* JLEnum.swift in Sources */,
 				E5359BCD1E0C56EB0053581A /* JLTest.xcdatamodeld in Sources */,
 				E5B227911E0DA10B007565FA /* main.swift in Sources */,
+				E5B227B51E0ECD9E007565FA /* JLProduct.swift in Sources */,
 				E5A764721E0C4E7100E7E3E2 /* JLViewController.swift in Sources */,
 				E5B2279F1E0DDEA0007565FA /* JLNetworkDelegate.swift in Sources */,
+				E5B227B71E0ECE1F007565FA /* JLPrice.swift in Sources */,
 				E5B227931E0DA1C8007565FA /* JLTestingAppDelegate.swift in Sources */,
 				E5B2278F1E0C6232007565FA /* JLCollectionViewCell.swift in Sources */,
 				E5B227AC1E0EA3B3007565FA /* JLRequestEndpoints.swift in Sources */,
