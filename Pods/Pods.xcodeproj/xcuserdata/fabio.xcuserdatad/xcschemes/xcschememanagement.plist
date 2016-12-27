@@ -4,17 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>DATASource.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>DATAStack.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>JSON.xcscheme</key>
+		<key>Kingfisher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -57,12 +52,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>01AE98FC48709226653A5EDF925A676A</key>
+		<key>1A0E27FCE4D42ACE0004A47E4151C21C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>25A2371CA102512879C71D59F6957EC8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4D842D80D79DF1D0B6FF78678B3345AC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -77,22 +77,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8CEB79529B4AB42646CBEFA172866591</key>
+		<key>BBEA590A39EDB876F22AB9EC811FBA89</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>97009068D0E05A9EFACE6DC18D98BEF6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A80B77C7C7080EE5D7DB10E1F561DF7C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>BD95207DF6C270E8D6192EDC3732FE9E</key>
+		<key>C4944FEC314D1A66588651D006273ADE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -102,7 +92,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FB644CBEF02123B48F9E02139C2CAAFD</key>
+		<key>FA4255A61180175B2ED6E1A4C6EA6F2D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

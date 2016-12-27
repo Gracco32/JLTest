@@ -1,7 +1,6 @@
 PODS:
-  - DATASource (6.1.4)
   - DATAStack (6.1.2)
-  - JSON (5.0.0)
+  - Kingfisher (3.2.4)
   - OHHTTPStubs (5.2.3):
     - OHHTTPStubs/Default (= 5.2.3)
   - OHHTTPStubs/Core (5.2.3)
@@ -26,22 +25,20 @@ PODS:
   - XCGLogger/Core (4.0.0)
 
 DEPENDENCIES:
-  - DATASource
-  - JSON
+  - Kingfisher (~> 3.0)
   - OHHTTPStubs
   - OHHTTPStubs/Swift
   - Sync (~> 2)
   - XCGLogger (~> 4.0)
 
 SPEC CHECKSUMS:
-  DATASource: 1b88a4b9556f9d146319f8187c249aa2130e3714
   DATAStack: a45fc144e15193f1b22c26b507cc46655ce96a71
-  JSON: 93622160a062588b4cd3497b77ccd777f1fd0587
+  Kingfisher: 8d80f39da403cd9c9ee11984e1655f4d6a566cdb
   OHHTTPStubs: e238cd5b66d8efa51c861db45895de8fe079f4a7
   Sync: 02e5442ed69b0081f7f9a33e6c472f6f84d157ec
   SYNCPropertyMapper: b3157f5183285c8a25ba23877b95a06ec2547e73
   XCGLogger: 38063ea89b4c8b23232d18efd2e12eb0005f3ea4
 
-PODFILE CHECKSUM: 3a18cda7812b636a5733b5d09ae3f907be497069
+PODFILE CHECKSUM: dc125fbd6b523a41e3feb60c4a925ce5e77225b0
 
 COCOAPODS: 1.1.1

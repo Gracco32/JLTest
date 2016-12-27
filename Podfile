@@ -10,8 +10,7 @@ target 'JLTest' do
   pod 'OHHTTPStubs' # Default subspecs, including support for NSURLSession & JSON etc
   pod 'OHHTTPStubs/Swift' # Adds the Swiftier API wrapper too
   pod 'Sync', '~> 2'
-  pod 'JSON'
-  pod 'DATASource'
+  pod 'Kingfisher', '~> 3.0'
   
   target 'JLTestTests' do
     inherit! :search_paths

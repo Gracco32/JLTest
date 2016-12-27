@@ -12,8 +12,7 @@ class JLCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var priceLabel
-    : UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
     
     override func layoutSubviews() {
         super.layoutSubviews()

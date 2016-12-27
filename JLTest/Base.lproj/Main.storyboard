@@ -82,7 +82,7 @@
                                                 </label>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="kRO-hZ-zPg" firstAttribute="leading" secondItem="gQl-gA-Aoa" secondAttribute="leadingMargin" constant="17" id="7I4-Ps-yuw"/>
                                             <constraint firstItem="qDv-0Y-dGc" firstAttribute="top" secondItem="kRO-hZ-zPg" secondAttribute="bottom" constant="8" id="PTZ-pP-SLo"/>
@@ -117,6 +117,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Dishwashers" id="ggZ-sb-cTY"/>
                     <connections>
+                        <outlet property="collectionView" destination="K8h-Dz-wuj" id="JHe-Fg-7uU"/>
                         <outlet property="mainTitle" destination="ggZ-sb-cTY" id="jIE-AZ-iRz"/>
                     </connections>
                 </viewController>
