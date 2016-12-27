@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		01DF6CEC77C3F3E822DF0A57 /* Pods_JLTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8722731750C2DC7325D8E07 /* Pods_JLTestTests.framework */; };
 		33D1A8284167F519A7F720E1 /* Pods_JLTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 825660106FA601E95C86F8E9 /* Pods_JLTest.framework */; };
+		E5273CA01E12D46F00A3378F /* JLFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5273C9F1E12D46F00A3378F /* JLFlowLayout.swift */; };
 		E5359BCD1E0C56EB0053581A /* JLTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E5359BCB1E0C56EB0053581A /* JLTest.xcdatamodeld */; };
 		E57D24C21E0C45AA00B0995D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E57D24C01E0C45AA00B0995D /* Main.storyboard */; };
 		E57D24C71E0C45AA00B0995D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E57D24C61E0C45AA00B0995D /* Assets.xcassets */; };
@@ -66,6 +67,7 @@
 		BB51232D3C8AD449C931730C /* Pods-JLTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JLTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JLTest/Pods-JLTest.debug.xcconfig"; sourceTree = "<group>"; };
 		D2FCEFCFDED4CAF2D6E21AEA /* Pods-JLTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JLTestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JLTestTests/Pods-JLTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		E3A57F209DE3E8C41EFDBC6E /* Pods_JLTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JLTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5273C9F1E12D46F00A3378F /* JLFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLFlowLayout.swift; path = Controllers/JLFlowLayout.swift; sourceTree = "<group>"; };
 		E5359BCC1E0C56EB0053581A /* JLTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JLTest.xcdatamodel; sourceTree = "<group>"; };
 		E57D24B91E0C45AA00B0995D /* JLTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JLTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E57D24C11E0C45AA00B0995D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				E5A764711E0C4E7100E7E3E2 /* JLViewController.swift */,
+				E5273C9F1E12D46F00A3378F /* JLFlowLayout.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -635,6 +638,7 @@
 				E5B227991E0DD05E007565FA /* JLRequestFactory.swift in Sources */,
 				E5B227A61E0E94AB007565FA /* JLEnum.swift in Sources */,
 				E5359BCD1E0C56EB0053581A /* JLTest.xcdatamodeld in Sources */,
+				E5273CA01E12D46F00A3378F /* JLFlowLayout.swift in Sources */,
 				E5B227911E0DA10B007565FA /* main.swift in Sources */,
 				E5B227B51E0ECD9E007565FA /* JLProduct.swift in Sources */,
 				E5A764721E0C4E7100E7E3E2 /* JLViewController.swift in Sources */,
