@@ -8,11 +8,15 @@
 
 import XCTest
 import OHHTTPStubs
+import DATAStack
 @testable import JLTest
 
 class JLRequestEndpointsTest: XCTestCase, JLNetworkDelegate {
     
     var requestFactory: JLRequestFactory!
+    var dataStack : DATAStack!
+    var dataHelper: JLDataHelper!
+    var parser : JLResponseParser!
     var requestSender: JLRequestSender!
     var apiInterface: JLRequestEndpoints!
     
@@ -34,9 +38,12 @@ class JLRequestEndpointsTest: XCTestCase, JLNetworkDelegate {
 
         // Initialise the requestSender with mocks
         requestFactory = JLRequestFactoryMock()
-        let parser = JLResponseParser()
+        parser = JLResponseParser()
         
-        requestSender = JLRequestSender(requestFactory: requestFactory, parser: parser, delegate: self)
+        dataStack = DATAStack(modelName: "JLTest", storeType: .inMemory)
+        dataHelper = JLDataHelper(dataStack: dataStack)
+        
+        requestSender = JLRequestSender(requestFactory: requestFactory, parser: parser, dataHelper: dataHelper, delegate: self)
         
         apiInterface = JLRequestEndpoints(requestSender: requestSender)
         

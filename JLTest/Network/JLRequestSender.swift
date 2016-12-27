@@ -16,6 +16,7 @@ class JLRequestSender: NSObject, URLSessionTaskDelegate, URLSessionDataDelegate 
     var session: URLSession!
     var requestFactory: JLRequestFactory!
     var parser: JLResponseParser!
+    var dataHelper: JLDataHelper!
     
     weak var delegate: JLNetworkDelegate?
     
@@ -28,12 +29,13 @@ class JLRequestSender: NSObject, URLSessionTaskDelegate, URLSessionDataDelegate 
     
     //MARK: Initialiser
     
-    init(requestFactory: JLRequestFactory, parser: JLResponseParser, urlSession: URLSession? = nil, delegate: JLNetworkDelegate?) {
+    init(requestFactory: JLRequestFactory, parser: JLResponseParser, dataHelper: JLDataHelper, urlSession: URLSession? = nil, delegate: JLNetworkDelegate?) {
         
         super.init()
         
         self.requestFactory = requestFactory
         self.parser = parser
+        self.dataHelper = dataHelper
         self.delegate = delegate
         
         if let session = urlSession {
@@ -98,15 +100,25 @@ class JLRequestSender: NSObject, URLSessionTaskDelegate, URLSessionDataDelegate 
             let data = self.tasksBeingExecuted[taskDescription] {
             
             if let parsedData = parser.parse(data: data) as? [String: AnyObject] {
-            
-                // parsing succeeded
-                self.notifyDelegateRequestProcessed(requestType: requestType, data: parsedData)
+                
+                dataHelper.saveData(json: parsedData, type: requestType, completion: { (error) in
+                    
+                    if let _ = error {
+                        // db insertion failed
+                        self.notifyDelegateRequestFailed(requestType: requestType, httpCode: httpCode)
+                        
+                    } else {
+                        // parsing and db insertion were successfull
+                        self.notifyDelegateRequestProcessed(requestType: requestType, data: parsedData)
+                    }
+                    
+                })
                 
             } else {
                 // parsing failed
                 self.notifyDelegateRequestFailed(requestType: requestType, httpCode: httpCode)
             }
-
+            
         }
     }
     
