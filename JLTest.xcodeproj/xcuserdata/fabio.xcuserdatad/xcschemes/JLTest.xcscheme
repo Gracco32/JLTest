@@ -35,7 +35,7 @@
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
-            buildForTesting = "NO"
+            buildForTesting = "YES"
             buildForRunning = "NO"
             buildForProfiling = "NO"
             buildForArchiving = "NO"
@@ -64,6 +64,16 @@
                BlueprintIdentifier = "E57D24CF1E0C45AA00B0995D"
                BuildableName = "JLTestTests.xctest"
                BlueprintName = "JLTestTests"
+               ReferencedContainer = "container:JLTest.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E57D24DA1E0C45AA00B0995D"
+               BuildableName = "JLTestUITests.xctest"
+               BlueprintName = "JLTestUITests"
                ReferencedContainer = "container:JLTest.xcodeproj">
             </BuildableReference>
          </TestableReference>

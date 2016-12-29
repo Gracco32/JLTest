@@ -57,4 +57,38 @@ class JLTestUITests: XCTestCase {
         XCTAssertTrue(price.exists)
 
     }
+    
+    func testDetailView() {
+        
+        let collection = app.collectionViews.element
+        XCTAssertTrue(collection.exists)
+        
+        let cell = collection.cells.element(boundBy:0)
+        
+        let exists = NSPredicate(format: "exists == true")
+        expectation(for: exists, evaluatedWith: cell, handler: nil)
+        waitForExpectations(timeout: 10, handler: nil)
+        
+        XCTAssertTrue(cell.exists)
+        
+        cell.tap()
+        
+        let imageView = app.images["detailImageViewID"]
+        let priceTitle = app.staticTexts["detailPriceLabelID"]
+        let priceOffers = app.staticTexts["offerLabelID"]
+        let priceWarranty = app.staticTexts["warrantyLabelID"]
+        let productInfoTitle = app.staticTexts["infoTitleLableID"]
+        let productCode = app.staticTexts["codeLabelID"]
+        let productDetails = app.otherElements["detailsWebViewID"]
+        let tableView = app.tables["featuresTableViewID"]
+        
+        XCTAssertTrue(imageView.exists)
+        XCTAssertTrue(priceTitle.exists)
+        XCTAssertTrue(priceOffers.exists)
+        XCTAssertTrue(priceWarranty.exists)
+        XCTAssertTrue(productInfoTitle.exists)
+        XCTAssertTrue(productCode.exists)
+        XCTAssertTrue(productDetails.exists)
+        XCTAssertTrue(tableView.exists)
+    }
 }
