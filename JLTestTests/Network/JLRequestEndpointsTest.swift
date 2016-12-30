@@ -73,6 +73,17 @@ class JLRequestEndpointsTest: XCTestCase, JLNetworkDelegate {
         }
     }
     
+    func testGetProductDetails() {
+        
+        expectation = expectation(description: "productDetailsRequestExpectation")
+        
+        apiInterface.getProductDetails(productId: "testId")
+        
+        waitForExpectations(timeout: 5) { error in
+            // timeout is automatically treated as a failed test
+        }
+    }
+    
     //MARK: JLNetworkDelegate
     
     func requestProcessed(type: JLRequestType, data: Dictionary<String, AnyObject>) {
@@ -80,6 +91,11 @@ class JLRequestEndpointsTest: XCTestCase, JLNetworkDelegate {
         if type == .GetProducts && expectation.description == "productsRequestExpectation" {
             expectation.fulfill()
         }
+        
+        if type == .GetProductDetails && expectation.description == "productDetailsRequestExpectation" {
+            expectation.fulfill()
+        }
+
     }
     
     func requestFailed(type: JLRequestType, httpCode: Int?) {

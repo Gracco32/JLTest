@@ -24,4 +24,11 @@ class JLRequestEndpoints: NSObject {
         requestSender.sendDataRequest(method: "GET", endpoint: "v1/products/search?q=dishwasher&key=Wu1Xqn3vNrd1p7hqkvB6hEu0G9OrsYGb&pageSize=\(pageSize)", type: .GetProducts)
     }
     
+    /**
+     Send the request to get product details.
+     */
+    func getProductDetails(productId: String) {
+        requestSender.sendDataRequest(method: "GET", endpoint: "v1/products/\(productId)?key=Wu1Xqn3vNrd1p7hqkvB6hEu0G9OrsYGb", type: .GetProductDetails)
+    }
+    
 }

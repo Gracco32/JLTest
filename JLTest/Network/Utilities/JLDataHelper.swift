@@ -37,6 +37,8 @@ class JLDataHelper: NSObject {
             if json.keys.contains("products") {
                 jsonValues = json["products"] as! [[String : AnyObject]]
             }
+        case .GetProductDetails:
+            entityName = "Product"
         default:
             entityName = ""
         }

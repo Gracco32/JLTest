@@ -44,7 +44,7 @@ class JLViewController: UIViewController, UICollectionViewDelegate, UICollection
         
         dataSource = modelLayer.fetchProducts()
         
-        if let posts = dataSource , posts.count > 0 {
+        if let posts = dataSource, posts.count > 0 {
             refresh()
         }
         else {
