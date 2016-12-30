@@ -76,4 +76,25 @@ class JLModelLayer: NSObject {
         return Optional([])
     }
     
+    /**
+     Fetch the JLProductDetails data from the model.
+     
+     - returns: Optional JLProductDetails item.
+     
+     */
+    func fetchProductDetails(productId: String) -> JLProductDetails? {
+        
+        let request: NSFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "ProductDetails")
+        request.sortDescriptors = [NSSortDescriptor(key: "productId", ascending: true)]
+        
+        let predicate: NSPredicate = NSPredicate(format: "%K = %@", "productId", productId)
+        request.predicate = predicate
+        
+        if let productDetails = fetchData(request: request) as? [JLProductDetails],
+            productDetails.count > 0 {
+            return productDetails[0]
+        }
+        
+        return nil
+    }
 }
