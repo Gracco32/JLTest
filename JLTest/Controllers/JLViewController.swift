@@ -103,7 +103,7 @@ class JLViewController: UIViewController, UICollectionViewDelegate, UICollection
         
     }
 
-    //MARK: BHTNetworkDelegate
+    //MARK: JLNetworkDelegate
     
     func requestProcessed(type: JLRequestType, data: Dictionary<String, AnyObject>) {
         

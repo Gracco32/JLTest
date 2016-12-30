@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16B2555" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Details" representedClassName=".JLDetails" syncable="YES">
+        <attribute name="features" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="productInformation" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="productDetails" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ProductDetails" inverseName="details" inverseEntity="ProductDetails" syncable="YES"/>
+    </entity>
+    <entity name="ImageUrl" representedClassName=".JLImages" syncable="YES">
+        <attribute name="urls" optional="YES" attributeType="Binary" syncable="YES"/>
+        <relationship name="media" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Media" inverseName="images" inverseEntity="Media" syncable="YES"/>
+    </entity>
+    <entity name="Media" representedClassName=".JLMedia" syncable="YES">
+        <relationship name="images" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="ImageUrl" inverseName="media" inverseEntity="ImageUrl" syncable="YES"/>
+        <relationship name="productDetails" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ProductDetails" inverseName="media" inverseEntity="ProductDetails" syncable="YES"/>
+    </entity>
     <entity name="Price" representedClassName=".JLPrice" syncable="YES">
         <attribute name="currency" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="now" optional="YES" attributeType="String" syncable="YES"/>
@@ -8,6 +21,7 @@
         <attribute name="uom" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="was" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="product" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Product" inverseName="price" inverseEntity="Product" syncable="YES"/>
+        <relationship name="productDetails" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ProductDetails" inverseName="price" inverseEntity="ProductDetails" syncable="YES"/>
     </entity>
     <entity name="Product" representedClassName=".JLProduct" syncable="YES">
         <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
@@ -18,10 +32,36 @@
             </userInfo>
         </attribute>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="price" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Price" inverseName="product" inverseEntity="Price" syncable="YES"/>
+        <relationship name="price" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Price" inverseName="product" inverseEntity="Price" syncable="YES"/>
+        <relationship name="productDetails" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ProductDetails" inverseName="product" inverseEntity="ProductDetails" syncable="YES"/>
+    </entity>
+    <entity name="ProductDetails" representedClassName=".JLProductDetails" syncable="YES">
+        <attribute name="code" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="displaySpecialOffer" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productId" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="hyper.isPrimaryKey" value="true"/>
+                <entry key="hyper.remoteKey" value="productId"/>
+            </userInfo>
+        </attribute>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="additionalServices" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Services" inverseName="productDetails" inverseEntity="Services" syncable="YES"/>
+        <relationship name="details" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Details" inverseName="productDetails" inverseEntity="Details" syncable="YES"/>
+        <relationship name="media" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Media" inverseName="productDetails" inverseEntity="Media" syncable="YES"/>
+        <relationship name="price" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Price" inverseName="productDetails" inverseEntity="Price" syncable="YES"/>
+        <relationship name="product" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Product" inverseName="productDetails" inverseEntity="Product" syncable="YES"/>
+    </entity>
+    <entity name="Services" representedClassName=".JLServices" syncable="YES">
+        <attribute name="includedServices" optional="YES" attributeType="Binary" syncable="YES"/>
+        <relationship name="productDetails" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ProductDetails" inverseName="additionalServices" inverseEntity="ProductDetails" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Price" positionX="-54" positionY="18" width="128" height="150"/>
-        <element name="Product" positionX="-63" positionY="-18" width="128" height="30"/>
+        <element name="Price" positionX="2464" positionY="1953" width="128" height="163"/>
+        <element name="Product" positionX="2457" positionY="2213" width="128" height="118"/>
+        <element name="ImageUrl" positionX="2914" positionY="2384" width="128" height="73"/>
+        <element name="ProductDetails" positionX="2682" positionY="2079" width="128" height="178"/>
+        <element name="Media" positionX="2907" positionY="2250" width="128" height="73"/>
+        <element name="Services" positionX="2907" positionY="2025" width="128" height="73"/>
+        <element name="Details" positionX="2907" positionY="2133" width="128" height="88"/>
     </elements>
 </model>

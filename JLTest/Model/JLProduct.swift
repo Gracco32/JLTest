@@ -16,4 +16,6 @@ public class JLProduct: NSManagedObject {
     @NSManaged public var image: String
 
     @NSManaged public var price: JLPrice
+    @NSManaged public var productDetails: JLProductDetails
+    
 }

@@ -38,7 +38,7 @@ class JLDataHelper: NSObject {
                 jsonValues = json["products"] as! [[String : AnyObject]]
             }
         case .GetProductDetails:
-            entityName = "Product"
+            entityName = "ProductDetails"
         default:
             entityName = ""
         }

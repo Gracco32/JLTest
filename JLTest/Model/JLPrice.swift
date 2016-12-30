@@ -19,4 +19,5 @@ public class JLPrice: NSManagedObject {
     @NSManaged public var currency: String
     
     @NSManaged public var product: JLProduct
+    @NSManaged public var productDetails: JLProductDetails
 }
