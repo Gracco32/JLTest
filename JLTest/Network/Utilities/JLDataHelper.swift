@@ -47,7 +47,7 @@ class JLDataHelper: NSObject {
             jsonValues,
             inEntityNamed: entityName,
             dataStack: dataStack,
-            operations: [.All]) { error in
+            operations: [.Insert,.Update]) { error in
                 
                 log.debug("Save operation completed")
                 

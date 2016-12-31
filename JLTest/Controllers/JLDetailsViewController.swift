@@ -18,6 +18,8 @@ class JLDetailsViewController: UIViewController {
     
     @IBOutlet weak var priceViewHeightConstraint: NSLayoutConstraint!
     
+    var details: JLProductDetails?
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         

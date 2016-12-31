@@ -33,7 +33,6 @@
         </attribute>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="price" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Price" inverseName="product" inverseEntity="Price" syncable="YES"/>
-        <relationship name="productDetails" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ProductDetails" inverseName="product" inverseEntity="ProductDetails" syncable="YES"/>
     </entity>
     <entity name="ProductDetails" representedClassName=".JLProductDetails" syncable="YES">
         <attribute name="code" optional="YES" attributeType="String" syncable="YES"/>
@@ -49,7 +48,10 @@
         <relationship name="details" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Details" inverseName="productDetails" inverseEntity="Details" syncable="YES"/>
         <relationship name="media" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Media" inverseName="productDetails" inverseEntity="Media" syncable="YES"/>
         <relationship name="price" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Price" inverseName="productDetails" inverseEntity="Price" syncable="YES"/>
-        <relationship name="product" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Product" inverseName="productDetails" inverseEntity="Product" syncable="YES"/>
+        <userInfo>
+            <entry key="hyper.isPrimaryKey" value="true"/>
+            <entry key="hyper.remoteKey" value="value"/>
+        </userInfo>
     </entity>
     <entity name="Services" representedClassName=".JLServices" syncable="YES">
         <attribute name="includedServices" optional="YES" attributeType="Binary" syncable="YES"/>
@@ -57,9 +59,9 @@
     </entity>
     <elements>
         <element name="Price" positionX="2464" positionY="1953" width="128" height="163"/>
-        <element name="Product" positionX="2457" positionY="2213" width="128" height="118"/>
+        <element name="Product" positionX="2457" positionY="2213" width="128" height="103"/>
         <element name="ImageUrl" positionX="2914" positionY="2384" width="128" height="73"/>
-        <element name="ProductDetails" positionX="2682" positionY="2079" width="128" height="178"/>
+        <element name="ProductDetails" positionX="2682" positionY="2079" width="128" height="163"/>
         <element name="Media" positionX="2907" positionY="2250" width="128" height="73"/>
         <element name="Services" positionX="2907" positionY="2025" width="128" height="73"/>
         <element name="Details" positionX="2907" positionY="2133" width="128" height="88"/>

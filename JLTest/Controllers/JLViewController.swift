@@ -23,7 +23,6 @@ class JLViewController: UIViewController, UICollectionViewDelegate, UICollection
     var apiInterface: JLRequestEndpoints!
     
     var dataSource: [JLProduct]?
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,6 +67,34 @@ class JLViewController: UIViewController, UICollectionViewDelegate, UICollection
         collectionView.reloadData()
     }
     
+    private func selectProduct(productId: String) -> Bool {
+        
+        if let productDetails = modelLayer.fetchProductDetails(productId: productId) {
+            
+            // perform segue
+            self.performSegue(withIdentifier: "detailSegueID", sender: productDetails)
+            return true
+        }
+        
+        return false
+    }
+    
+    private func showErrorAlert() {
+        
+        let alertController = UIAlertController(title: "Sorry!", message: "An error has occured;\nPlease try again later.", preferredStyle: .alert)
+        
+        // Create the actions
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) {
+            UIAlertAction in
+        }
+        
+        // Add the actions
+        alertController.addAction(cancelAction)
+        
+        // Present the controller
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
     // MARK: UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -101,34 +128,65 @@ class JLViewController: UIViewController, UICollectionViewDelegate, UICollection
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        if let dataSource = dataSource,
+            let product = dataSource[indexPath.row] as JLProduct? {
+            
+            // Check if the product is in cache
+            if !selectProduct(productId: product.productId) {
+
+               // request product details
+                apiInterface.getProductDetails(productId: product.productId)
+            }
+        }
     }
 
     //MARK: JLNetworkDelegate
     
     func requestProcessed(type: JLRequestType, data: Dictionary<String, AnyObject>) {
         
-        self.dataSource = modelLayer.fetchProducts()
-        refresh()
-        log.debug("Data received")
+        switch type {
+        case .GetProducts:
+            
+            self.dataSource = modelLayer.fetchProducts()
+            refresh()
+            
+        case .GetProductDetails:
+            
+            if let productId = data["productId"] as? String {
+                let _ = selectProduct(productId: productId)
+            } else {
+                // TODO: improve request failure check
+                showErrorAlert()
+            }
+            
+        default:
+            log.debug("Type not found")
+        }
         
+        log.debug("Data received")
     }
     
     func requestFailed(type: JLRequestType, httpCode: Int?) {
         
         log.error("Error receiving data")
         
-        let alertController = UIAlertController(title: "Sorry!", message: "An error has occured;\nPlease try again later.", preferredStyle: .alert)
+        showErrorAlert()
         
-        // Create the actions
-        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) {
-            UIAlertAction in
+    }
+
+    // MARK: Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "detailSegueID" {
+            
+            if let details = sender as? JLProductDetails,
+                let detailViewController = segue.destination as? JLDetailsViewController {
+                
+                detailViewController.details = details
+                
+            }
         }
-        
-        // Add the actions
-        alertController.addAction(cancelAction)
-        
-        // Present the controller
-        self.present(alertController, animated: true, completion: nil)
         
     }
 

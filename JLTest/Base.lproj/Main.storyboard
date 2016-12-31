@@ -98,7 +98,6 @@
                                             <outlet property="descriptionLabel" destination="qDv-0Y-dGc" id="Luv-Y8-avj"/>
                                             <outlet property="image" destination="kRO-hZ-zPg" id="tAY-WQ-6jN"/>
                                             <outlet property="priceLabel" destination="6p1-ar-Do8" id="0Vy-aQ-edv"/>
-                                            <segue destination="TSu-zu-V8d" kind="show" identifier="detailSegueID" id="nhT-xi-tB6"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -120,6 +119,7 @@
                     <connections>
                         <outlet property="collectionView" destination="K8h-Dz-wuj" id="JHe-Fg-7uU"/>
                         <outlet property="mainTitle" destination="ggZ-sb-cTY" id="jIE-AZ-iRz"/>
+                        <segue destination="TSu-zu-V8d" kind="show" identifier="detailSegueID" id="A9x-wQ-R18"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S7f-9g-baT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -312,7 +312,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fq0-OW-OdT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1160.7421875" y="93.75"/>
+            <point key="canvasLocation" x="881" y="93"/>
         </scene>
         <!--Content Page View Controller-->
         <scene sceneID="2Kg-Lw-pjZ">
