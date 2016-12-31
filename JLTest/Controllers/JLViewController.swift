@@ -47,6 +47,8 @@ class JLViewController: UIViewController, UICollectionViewDelegate, UICollection
             refresh()
         }
         else {
+            
+            JLLoaderView.showLoader(view: self.view)
             apiInterface.getProducts()
         }
 
@@ -135,6 +137,7 @@ class JLViewController: UIViewController, UICollectionViewDelegate, UICollection
             if !selectProduct(productId: product.productId) {
 
                // request product details
+                JLLoaderView.showLoader(view: self.view)
                 apiInterface.getProductDetails(productId: product.productId)
             }
         }
@@ -143,6 +146,8 @@ class JLViewController: UIViewController, UICollectionViewDelegate, UICollection
     //MARK: JLNetworkDelegate
     
     func requestProcessed(type: JLRequestType, data: Dictionary<String, AnyObject>) {
+        
+        JLLoaderView.hideLoader()
         
         switch type {
         case .GetProducts:
@@ -164,6 +169,8 @@ class JLViewController: UIViewController, UICollectionViewDelegate, UICollection
     }
     
     func requestFailed(type: JLRequestType, httpCode: Int?) {
+        
+        JLLoaderView.hideLoader()
         
         log.error("Error receiving data")
         

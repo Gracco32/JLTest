@@ -15,6 +15,7 @@
 		E5202F831E16CAFB00CDA282 /* JLMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5202F821E16CAFB00CDA282 /* JLMedia.swift */; };
 		E5202F851E16E5F800CDA282 /* JLServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5202F841E16E5F800CDA282 /* JLServices.swift */; };
 		E5202F871E16E62000CDA282 /* JLDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5202F861E16E62000CDA282 /* JLDetails.swift */; };
+		E5202F8E1E17BDB600CDA282 /* JLLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5202F8D1E17BDB600CDA282 /* JLLoaderView.swift */; };
 		E5273CA01E12D46F00A3378F /* JLFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5273C9F1E12D46F00A3378F /* JLFlowLayout.swift */; };
 		E5273CA21E14521000A3378F /* JLDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5273CA11E14521000A3378F /* JLDetailsViewController.swift */; };
 		E5273CA41E15827F00A3378F /* JLPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5273CA31E15827F00A3378F /* JLPageViewController.swift */; };
@@ -84,6 +85,7 @@
 		E5202F821E16CAFB00CDA282 /* JLMedia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLMedia.swift; path = Model/JLMedia.swift; sourceTree = "<group>"; };
 		E5202F841E16E5F800CDA282 /* JLServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLServices.swift; path = Model/JLServices.swift; sourceTree = "<group>"; };
 		E5202F861E16E62000CDA282 /* JLDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLDetails.swift; path = Model/JLDetails.swift; sourceTree = "<group>"; };
+		E5202F8D1E17BDB600CDA282 /* JLLoaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLLoaderView.swift; path = Views/JLLoaderView.swift; sourceTree = "<group>"; };
 		E5273C9F1E12D46F00A3378F /* JLFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLFlowLayout.swift; path = Controllers/JLFlowLayout.swift; sourceTree = "<group>"; };
 		E5273CA11E14521000A3378F /* JLDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLDetailsViewController.swift; path = Controllers/JLDetailsViewController.swift; sourceTree = "<group>"; };
 		E5273CA31E15827F00A3378F /* JLPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLPageViewController.swift; path = Controllers/JLPageViewController.swift; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 				E5B2278D1E0C61A9007565FA /* CellView */,
 				E5273CA71E15B02E00A3378F /* JLPriceView.swift */,
 				E5273CA91E15B05F00A3378F /* JLProductInfoView.swift */,
+				E5202F8D1E17BDB600CDA282 /* JLLoaderView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -692,6 +695,7 @@
 				E5202F831E16CAFB00CDA282 /* JLMedia.swift in Sources */,
 				E5273CA21E14521000A3378F /* JLDetailsViewController.swift in Sources */,
 				E5A764701E0C4E5B00E7E3E2 /* AppDelegate.swift in Sources */,
+				E5202F8E1E17BDB600CDA282 /* JLLoaderView.swift in Sources */,
 				E5273CA41E15827F00A3378F /* JLPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
