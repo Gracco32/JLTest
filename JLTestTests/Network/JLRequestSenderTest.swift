@@ -72,7 +72,7 @@ class JLRequestSenderTest: XCTestCase, JLNetworkDelegate {
         }
     }
     
-    func testSendRequestFail() {
+    func testSendRequestFailWrongFormat() {
         
         // simulate wrong format json
         let jsonWrongFormat = "{>}}".data(using: .utf8)!
@@ -89,6 +89,46 @@ class JLRequestSenderTest: XCTestCase, JLNetworkDelegate {
             // timeout is automatically treated as a failed test
         }
         
+    }
+    
+    func testSendRequestFailClientError() {
+        
+        stub(condition: isHost("www.testendpoint.com")) { request in
+            // Stub it with test.json stub file
+            return OHHTTPStubsResponse(
+                fileAtPath: OHPathForFile("test.json", type(of: self))!,
+                statusCode: 400,
+                headers: ["Content-Type":"application/json"]
+            )
+        }
+        
+        expectation = expectation(description: "requestFailClientExpectation")
+        
+        requestSender.sendDataRequest(method: "GET", endpoint: "", type: .GetProducts)
+        
+        waitForExpectations(timeout: 5) { error in
+            // timeout is automatically treated as a failed test
+        }
+    }
+    
+    func testSendRequestFailServerError() {
+        
+        stub(condition: isHost("www.testendpoint.com")) { request in
+            // Stub it with test.json stub file
+            return OHHTTPStubsResponse(
+                fileAtPath: OHPathForFile("test.json", type(of: self))!,
+                statusCode: 500,
+                headers: ["Content-Type":"application/json"]
+            )
+        }
+        
+        expectation = expectation(description: "requestFailServerExpectation")
+        
+        requestSender.sendDataRequest(method: "GET", endpoint: "", type: .GetProducts)
+        
+        waitForExpectations(timeout: 5) { error in
+            // timeout is automatically treated as a failed test
+        }
     }
     
     //MARK: NAPNetworkDelegate
@@ -109,6 +149,13 @@ class JLRequestSenderTest: XCTestCase, JLNetworkDelegate {
             expectation.fulfill()
         }
         
+        if expectation.description == "requestFailClientExpectation" && httpCode == 400 {
+            expectation.fulfill()
+        }
+        
+        if expectation.description == "requestFailServerExpectation" && httpCode == 500 {
+            expectation.fulfill()
+        }
     }
     
 }

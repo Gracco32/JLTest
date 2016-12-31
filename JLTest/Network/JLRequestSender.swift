@@ -99,7 +99,8 @@ class JLRequestSender: NSObject, URLSessionTaskDelegate, URLSessionDataDelegate 
         if let taskDescription = task.taskDescription,
             let data = self.tasksBeingExecuted[taskDescription] {
             
-            if let parsedData = parser.parse(data: data) as? [String: AnyObject] {
+            if let parsedData = parser.parse(data: data) as? [String: AnyObject],
+                httpCode < 400 {
                 
                 dataHelper.saveData(json: parsedData, type: requestType, completion: { (error) in
                     
@@ -115,7 +116,7 @@ class JLRequestSender: NSObject, URLSessionTaskDelegate, URLSessionDataDelegate 
                 })
                 
             } else {
-                // parsing failed
+                // parsing failed, client error (40x), server error (50x)
                 self.notifyDelegateRequestFailed(requestType: requestType, httpCode: httpCode)
             }
             

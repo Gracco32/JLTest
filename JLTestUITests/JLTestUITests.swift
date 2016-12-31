@@ -82,7 +82,8 @@ class JLTestUITests: XCTestCase {
         let productDetails = app.otherElements["detailsWebViewID"]
         let tableView = app.tables["featuresTableViewID"]
         
-        XCTAssertTrue(imageView.exists)
+        expectation(for: exists, evaluatedWith: imageView, handler: nil)
+        waitForExpectations(timeout: 3, handler: nil)
         XCTAssertTrue(priceTitle.exists)
         XCTAssertTrue(priceOffers.exists)
         XCTAssertTrue(priceWarranty.exists)

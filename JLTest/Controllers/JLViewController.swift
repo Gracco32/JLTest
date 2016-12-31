@@ -154,9 +154,6 @@ class JLViewController: UIViewController, UICollectionViewDelegate, UICollection
             
             if let productId = data["productId"] as? String {
                 let _ = selectProduct(productId: productId)
-            } else {
-                // TODO: improve request failure check
-                showErrorAlert()
             }
             
         default:
