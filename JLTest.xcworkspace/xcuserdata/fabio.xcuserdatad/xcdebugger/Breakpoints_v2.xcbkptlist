@@ -9,13 +9,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "JLTest/Controllers/JLDetailsViewController.swift"
-            timestampString = "504895210.59054"
+            filePath = "JLTestUITests/JLTestUITests.swift"
+            timestampString = "505060416.298582"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
-            landmarkName = "changeLayout()"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "testDetailView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JLTestUITests/JLTestUITests.swift"
+            timestampString = "505060416.298582"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "testDetailView()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

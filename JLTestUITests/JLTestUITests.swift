@@ -75,7 +75,6 @@ class JLTestUITests: XCTestCase {
         
         let imageView = app.images["detailImageViewID"]
         let priceTitle = app.staticTexts["detailPriceLabelID"]
-        let priceOffers = app.staticTexts["offerLabelID"]
         let priceWarranty = app.staticTexts["warrantyLabelID"]
         let productInfoTitle = app.staticTexts["infoTitleLableID"]
         let productCode = app.staticTexts["codeLabelID"]
@@ -83,9 +82,8 @@ class JLTestUITests: XCTestCase {
         let tableView = app.tables["featuresTableViewID"]
         
         expectation(for: exists, evaluatedWith: imageView, handler: nil)
-        waitForExpectations(timeout: 3, handler: nil)
+        waitForExpectations(timeout: 10, handler: nil)
         XCTAssertTrue(priceTitle.exists)
-        XCTAssertTrue(priceOffers.exists)
         XCTAssertTrue(priceWarranty.exists)
         XCTAssertTrue(productInfoTitle.exists)
         XCTAssertTrue(productCode.exists)

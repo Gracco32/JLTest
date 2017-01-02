@@ -54,11 +54,6 @@ class JLViewController: UIViewController, UICollectionViewDelegate, UICollection
 
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     // MARK: Private methods
     
     private func refresh() {
@@ -196,4 +191,3 @@ class JLViewController: UIViewController, UICollectionViewDelegate, UICollection
     }
 
 }
-

@@ -42,7 +42,7 @@ class JLRequestFactory {
     /**
      Create API data request. Request params are added to body.
      
-     - parameter method:   HTTP method string, either "GET", "PUT", "POST".
+     - parameter method:   HTTP method string, either "GET", "PUT", "POST" or "DELETE".
      - parameter endpoint: Relative path to API endpoint.
      
      - returns: The newly created request.

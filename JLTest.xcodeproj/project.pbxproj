@@ -24,8 +24,8 @@
 		E5273CAA1E15B05F00A3378F /* JLProductInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5273CA91E15B05F00A3378F /* JLProductInfoView.swift */; };
 		E5359BCD1E0C56EB0053581A /* JLTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E5359BCB1E0C56EB0053581A /* JLTest.xcdatamodeld */; };
 		E56824E51E17FF0D007ABBFD /* JLAttributeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56824E41E17FF0D007ABBFD /* JLAttributeTableViewCell.swift */; };
+		E56E13011E1AAB8E004D802E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E56E13001E1AAB8E004D802E /* Assets.xcassets */; };
 		E57D24C21E0C45AA00B0995D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E57D24C01E0C45AA00B0995D /* Main.storyboard */; };
-		E57D24C71E0C45AA00B0995D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E57D24C61E0C45AA00B0995D /* Assets.xcassets */; };
 		E57D24CA1E0C45AA00B0995D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E57D24C81E0C45AA00B0995D /* LaunchScreen.storyboard */; };
 		E57D24E01E0C45AA00B0995D /* JLTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57D24DF1E0C45AA00B0995D /* JLTestUITests.swift */; };
 		E5A764701E0C4E5B00E7E3E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A7646F1E0C4E5B00E7E3E2 /* AppDelegate.swift */; };
@@ -95,9 +95,9 @@
 		E5273CA91E15B05F00A3378F /* JLProductInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLProductInfoView.swift; path = Views/JLProductInfoView.swift; sourceTree = "<group>"; };
 		E5359BCC1E0C56EB0053581A /* JLTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JLTest.xcdatamodel; sourceTree = "<group>"; };
 		E56824E41E17FF0D007ABBFD /* JLAttributeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLAttributeTableViewCell.swift; path = Views/CustomCellView/JLAttributeTableViewCell.swift; sourceTree = "<group>"; };
+		E56E13001E1AAB8E004D802E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E57D24B91E0C45AA00B0995D /* JLTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JLTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E57D24C11E0C45AA00B0995D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E57D24C61E0C45AA00B0995D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E57D24C91E0C45AA00B0995D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E57D24CB1E0C45AA00B0995D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E57D24D01E0C45AA00B0995D /* JLTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JLTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -214,8 +214,8 @@
 				E5A7646B1E0C4DA100E7E3E2 /* Views */,
 				E5A7646E1E0C4DB900E7E3E2 /* AppDelegates */,
 				E5B227901E0DA10B007565FA /* main.swift */,
+				E56E13001E1AAB8E004D802E /* Assets.xcassets */,
 				E57D24C01E0C45AA00B0995D /* Main.storyboard */,
-				E57D24C61E0C45AA00B0995D /* Assets.xcassets */,
 				E57D24C81E0C45AA00B0995D /* LaunchScreen.storyboard */,
 				E57D24CB1E0C45AA00B0995D /* Info.plist */,
 			);
@@ -505,7 +505,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E57D24CA1E0C45AA00B0995D /* LaunchScreen.storyboard in Resources */,
-				E57D24C71E0C45AA00B0995D /* Assets.xcassets in Resources */,
+				E56E13011E1AAB8E004D802E /* Assets.xcassets in Resources */,
 				E57D24C21E0C45AA00B0995D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

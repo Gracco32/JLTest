@@ -8,7 +8,7 @@
 
 import UIKit
 
-class JLDetailsViewController: UIViewController, UITableViewDataSource {
+class JLDetailsViewController: UIViewController, UITableViewDataSource, UIWebViewDelegate {
     
     @IBOutlet weak var mainStackView: UIStackView!
     @IBOutlet weak var containerView: UIView!
@@ -18,18 +18,29 @@ class JLDetailsViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var internalStackView: UIStackView!
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var readMoreButton: UIButton!
+    @IBOutlet weak var readMoreImage: UIImageView!
     
     @IBOutlet weak var priceViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var productViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var stackViewHeightConstraint: NSLayoutConstraint!
     
     var details: JLProductDetails?
     var attributes: [[String:String]]?
+    let webViewHeight = 118
+    var webViewContentHeight: Int = 0
+    var isWebViewExpanded: Bool = false
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         tableView.accessibilityIdentifier = "featuresTableViewID"
         tableView.dataSource = self
+        
+        readMoreButton.isEnabled = false
+        webViewContentHeight = webViewHeight
+        isWebViewExpanded = false
+        productViewHeightConstraint.constant = CGFloat(webViewHeight)
         
         if let d = details {
             
@@ -81,13 +92,21 @@ class JLDetailsViewController: UIViewController, UITableViewDataSource {
     
     // MARK: Private methods
     
+    // Adjust layout according to the device interface orientation and the product detail's webView size
     private func changeLayout() {
         
         let orient = UIApplication.shared.statusBarOrientation
+        
+        if webViewContentHeight > webViewHeight, isWebViewExpanded {
+            productViewHeightConstraint.constant = CGFloat(webViewContentHeight+70)
+        } else {
+            productViewHeightConstraint.constant = CGFloat(webViewHeight+70)
+        }
+        
         var contentHeight = containerView.frame.height + productInfoView.frame.height + (tableView.tableHeaderView?.frame.height)!
         
         if let attributes = attributes, attributes.count > 0 {
-            contentHeight += (tableView.rowHeight * CGFloat(attributes.count))
+            contentHeight += (tableView.rowHeight * CGFloat(attributes.count+1))
         }
         
         switch orient {
@@ -97,13 +116,45 @@ class JLDetailsViewController: UIViewController, UITableViewDataSource {
             if priceView.specialOfferLabelHeightConstraint.constant == 0 {
                 height = 60
             }
-            self.priceViewHeightConstraint.constant = 180 - height
+            self.priceViewHeightConstraint.constant = 150 - height
             self.internalStackView.insertArrangedSubview(self.priceView, at: 1)
             self.stackViewHeightConstraint.constant = contentHeight + self.priceViewHeightConstraint.constant
         default:
             self.priceView.removeFromSuperview()
             self.stackViewHeightConstraint.constant = contentHeight
             self.mainStackView.addArrangedSubview(self.priceView)
+        }
+    }
+    
+    // MARK: Actions
+    
+    
+    // Expand/Reduce the web view height
+    @IBAction func readMoreAction(_ sender: Any) {
+        
+        isWebViewExpanded = !isWebViewExpanded
+        
+        if isWebViewExpanded {
+            readMoreButton.setTitle("Read Less", for: UIControlState.normal)
+            readMoreImage.image = UIImage(named: "arrowUp")
+            productInfoView.infoWebView.scrollView.isScrollEnabled = false
+        } else {
+            readMoreButton.setTitle("Read More", for: UIControlState.normal)
+            readMoreImage.image = UIImage(named: "arrowDown")
+            productInfoView.infoWebView.scrollView.isScrollEnabled = true
+        }
+        
+        changeLayout()
+    }
+    
+    // MARK: WebViewDelegate
+    
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        
+        // Calculate the scrollHeight according to the web view content.
+        if let height = webView.stringByEvaluatingJavaScript(from: "document.body.scrollHeight"), height != "" {
+            webViewContentHeight = Int(height)!
+            readMoreButton.isEnabled = true
         }
     }
     

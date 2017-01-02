@@ -13,6 +13,7 @@ class JLContentPageViewController: UIViewController {
     @IBOutlet weak var image: UIImageView!
     
     var pageIndex = 0
+    // image url
     var url: URL?
     
     override func viewDidLoad() {
@@ -23,11 +24,6 @@ class JLContentPageViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-
     }
     
     override func viewWillLayoutSubviews() {

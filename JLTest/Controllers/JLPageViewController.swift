@@ -11,7 +11,7 @@ import UIKit
 class JLPageViewController: UIPageViewController, UIPageViewControllerDataSource {
     
     var urls: [String]?
-    // indicates if a new product detail has been tapped, in order to load the first image properly
+    // indicates if a new product detail has been selected, in order to load the first image properly
     var isNewProduct: Bool?
     
     override func viewDidLoad() {
@@ -34,11 +34,6 @@ class JLPageViewController: UIPageViewController, UIPageViewControllerDataSource
             let viewControllers:[UIViewController] = NSArray(object: vc) as! [UIViewController]
             self.setViewControllers(viewControllers, direction: .forward, animated: true, completion: nil)
         }
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func viewControllerAtIndex(index: Int) -> JLContentPageViewController {
