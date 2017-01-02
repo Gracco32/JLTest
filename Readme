@@ -1,0 +1,51 @@
+/**
+Readme file
+
+Author: Fabio Rossato 
+Date: 02-01-2017
+*/
+
+For this project I've used three third-party frameworks:
+- XCLogger : framework to simplify the logging; it supports XcodeColors plugin that allows to have different colours in the console debug to make it easier to read, and other helpful features.
+- Kingfisher : framework for downloading pictures asynchronously. Heavily inspired by the popular SDWebImage, completely written in Swift, lightweight and supporting the latest technologies.
+- Sync : library for object mapping and data base synchronisation
+- OHHTTPStubs : library that I used to stub the network requests during the unit tests.
+
+All the libraries and frameworks have been installed using Cocoapod, a library dependency manager for Xcode projects.
+
+-———————— IMPORTANT ——————————————————————————————————————————————————————-————————————————————————-
+
+Cocoapod uses a workspace to make the libraries available to the project, so please open the JLTest.xcworkspace
+instead of JLTest.xcodeproj otherwise the project will not compile.
+
+Project built with XCode 8.2.1, swift 3.0
+
+————————————————————————-————————————————————————-————————————————————————-————————————————————————-
+
+The code has been written thinking about scalability and testability;
+
+The classes are coded to allow dependency injection through the constructors to make easier writing unit tests and mocking objects.
+
+The model objects are used by the Sync framework to add data to the data base.
+
+I implemented a cache system using DataStack, a framework that works on top of CoreData; the advantage of this framework is that the developer doesn't need to write the code to set up core data; This helps to have clearer code for the test purpouse. 
+Another advantage is the fact that it takes care of changes in the model without the need of reinstalling the app when it happens.
+Other important features:
+- Easier thread safety
+- Runs synchronously when using unit tests
+- No singletons
+- SQLite and InMemory support out of the box
+- Easy database drop method 
+
+For the asynchronous download and caching of the images I preferred to use a well tested framework instead of building it by myself for time constraints reasons:
+a good image cache component, apart from the asynchronous download and the caching (already time consuming), should decompress images on a background queue to have a smooth and fluent UI (UIImageView does the decompression at the very last moment and this causes delays), and this part is not trivial; plus it should have other features like storing the decompressed images on disk/memory, to avoid redoing the decompression.
+
+The project is structured to keep the source files grouped by functionalities, so that it's easy to find them; All of the classes and files are using the prefix JL (John Lewis), that is a recommended practice, especially when working with other frameworks.
+
+I developed the app following the TDD principles.
+Unit tests and integration tests are included.
+The UI tests are testing the basic views of the app.
+
+I implemented the optional task, adding the Product Page;
+It wasn't clear how the 'Read More' button had to been implemented and if it had to be in place; As a matter of fact the landscape page provided image has the button, while the portrait version doesn't.
+My choice was to implement it on both orientations; it is possible to scroll the details while the detail's window is on the collapsed status, the scroll is blocked when the windows is on the expanded status.
