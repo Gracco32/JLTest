@@ -14,6 +14,8 @@ class JLPriceView: UIView {
     @IBOutlet weak var specialOfferLabel: UILabel!
     @IBOutlet weak var warrantyLabel: UILabel!
 
+    @IBOutlet weak var specialOfferLabelHeightConstraint: NSLayoutConstraint!
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         

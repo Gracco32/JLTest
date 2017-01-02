@@ -116,6 +116,7 @@ class JLViewController: UIViewController, UICollectionViewDelegate, UICollection
             let product = dataSource[indexPath.row] as JLProduct? {
             
             let url = URL(string: "https:\(product.image)")
+            cell.image.kf.indicatorType = .activity
             cell.image.kf.setImage(with: url)
             
             cell.descriptionLabel.text = product.title

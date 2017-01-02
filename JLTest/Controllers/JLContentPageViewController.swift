@@ -13,12 +13,18 @@ class JLContentPageViewController: UIViewController {
     @IBOutlet weak var image: UIImageView!
     
     var pageIndex = 0
+    var url: URL?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
 
@@ -28,5 +34,8 @@ class JLContentPageViewController: UIViewController {
         super.viewWillLayoutSubviews()
         
         image.accessibilityIdentifier = "detailImageViewID"
+        image.kf.indicatorType = .activity
+        image.kf.setImage(with: url)
     }
+
 }

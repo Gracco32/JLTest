@@ -23,6 +23,7 @@
 		E5273CA81E15B02E00A3378F /* JLPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5273CA71E15B02E00A3378F /* JLPriceView.swift */; };
 		E5273CAA1E15B05F00A3378F /* JLProductInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5273CA91E15B05F00A3378F /* JLProductInfoView.swift */; };
 		E5359BCD1E0C56EB0053581A /* JLTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E5359BCB1E0C56EB0053581A /* JLTest.xcdatamodeld */; };
+		E56824E51E17FF0D007ABBFD /* JLAttributeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56824E41E17FF0D007ABBFD /* JLAttributeTableViewCell.swift */; };
 		E57D24C21E0C45AA00B0995D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E57D24C01E0C45AA00B0995D /* Main.storyboard */; };
 		E57D24C71E0C45AA00B0995D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E57D24C61E0C45AA00B0995D /* Assets.xcassets */; };
 		E57D24CA1E0C45AA00B0995D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E57D24C81E0C45AA00B0995D /* LaunchScreen.storyboard */; };
@@ -93,6 +94,7 @@
 		E5273CA71E15B02E00A3378F /* JLPriceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLPriceView.swift; path = Views/JLPriceView.swift; sourceTree = "<group>"; };
 		E5273CA91E15B05F00A3378F /* JLProductInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLProductInfoView.swift; path = Views/JLProductInfoView.swift; sourceTree = "<group>"; };
 		E5359BCC1E0C56EB0053581A /* JLTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JLTest.xcdatamodel; sourceTree = "<group>"; };
+		E56824E41E17FF0D007ABBFD /* JLAttributeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JLAttributeTableViewCell.swift; path = Views/CustomCellView/JLAttributeTableViewCell.swift; sourceTree = "<group>"; };
 		E57D24B91E0C45AA00B0995D /* JLTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JLTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E57D24C11E0C45AA00B0995D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E57D24C61E0C45AA00B0995D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -341,6 +343,7 @@
 			isa = PBXGroup;
 			children = (
 				E5B2278E1E0C6232007565FA /* JLCollectionViewCell.swift */,
+				E56824E41E17FF0D007ABBFD /* JLAttributeTableViewCell.swift */,
 			);
 			name = CellView;
 			sourceTree = "<group>";
@@ -457,7 +460,7 @@
 				TargetAttributes = {
 					E57D24B81E0C45AA00B0995D = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = J5X2W9RVQK;
+						DevelopmentTeam = JQ6G3JDRQX;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
@@ -668,6 +671,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E56824E51E17FF0D007ABBFD /* JLAttributeTableViewCell.swift in Sources */,
 				E5B227BB1E0EDAAA007565FA /* JLModelLayer.swift in Sources */,
 				E5B2279D1E0DDB4A007565FA /* JLRequestSender.swift in Sources */,
 				E5B227A81E0E98A6007565FA /* JLLogger.swift in Sources */,
@@ -855,10 +859,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = J5X2W9RVQK;
+				DEVELOPMENT_TEAM = JQ6G3JDRQX;
 				INFOPLIST_FILE = JLTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = fabio.JLTest;
+				PRODUCT_BUNDLE_IDENTIFIER = "fabio.JLTest.-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -871,10 +875,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = J5X2W9RVQK;
+				DEVELOPMENT_TEAM = JQ6G3JDRQX;
 				INFOPLIST_FILE = JLTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = fabio.JLTest;
+				PRODUCT_BUNDLE_IDENTIFIER = "fabio.JLTest.-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

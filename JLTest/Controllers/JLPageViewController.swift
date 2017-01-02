@@ -10,16 +10,14 @@ import UIKit
 
 class JLPageViewController: UIPageViewController, UIPageViewControllerDataSource {
     
+    var urls: [String]?
+    // indicates if a new product detail has been tapped, in order to load the first image properly
+    var isNewProduct: Bool?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.dataSource = self
-        
-        let vc: JLContentPageViewController = self.viewControllerAtIndex(index: 0)
-        
-        let viewControllers:[UIViewController] = NSArray(object: vc) as! [UIViewController]
-        
-        self.setViewControllers(viewControllers, direction: .forward, animated: true, completion: nil)
         
         let pageControl = UIPageControl.appearance(whenContainedInInstancesOf: [JLPageViewController.self])
         
@@ -27,15 +25,32 @@ class JLPageViewController: UIPageViewController, UIPageViewControllerDataSource
         pageControl.currentPageIndicatorTintColor = .black
     }
 
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
+        if let isNew = isNewProduct, isNew == true {
+            isNewProduct = false
+            let vc: JLContentPageViewController = self.viewControllerAtIndex(index: 0)
+            let viewControllers:[UIViewController] = NSArray(object: vc) as! [UIViewController]
+            self.setViewControllers(viewControllers, direction: .forward, animated: true, completion: nil)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     func viewControllerAtIndex(index: Int) -> JLContentPageViewController {
-    print(index)
+    
         let vc: JLContentPageViewController = self.storyboard?.instantiateViewController(withIdentifier: "ContentPageControllerID") as! JLContentPageViewController
+        
         vc.pageIndex = index
+        
+        if let urlArray = urls {
+            let url = URL(string: "https:\(urlArray[index])")
+            vc.url = url
+        }
         
         return vc
     }
@@ -53,7 +68,7 @@ class JLPageViewController: UIPageViewController, UIPageViewControllerDataSource
         
         index += 1
         
-        if index == 4 {
+        if index == urls?.count {
             return nil
         }
         
@@ -77,7 +92,10 @@ class JLPageViewController: UIPageViewController, UIPageViewControllerDataSource
     }
     
     func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
-        return 4
+        if let urlArray = urls {
+            return urlArray.count
+        }
+        return 0
     }
     
     func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
@@ -85,7 +103,10 @@ class JLPageViewController: UIPageViewController, UIPageViewControllerDataSource
     }
  
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        return 4
+        if let urlArray = urls {
+            return urlArray.count
+        }
+        return 0
     }
     
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {
